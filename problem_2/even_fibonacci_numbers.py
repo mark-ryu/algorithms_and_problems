@@ -2,15 +2,15 @@
 def main():
     '''gets the fibonacci sequence whose values do not exceed four million, find 
     the sum of the even-valued terms.'''
-    m = 0
-    n = 1
+    preceeding_number = 0
+    current_number = 1
     even_list = list()
-    while n < 4000000:
-        z = m + n
-        m = n
-        n = z
-        if n % 2 == 0:
-            even_list.append(n)
+    while current_number < 4000000:
+        sum_of_two = preceeding_number + current_number
+        preceeding_number = current_number
+        current_number = sum_of_two
+        if current_number % 2 == 0:
+            even_list.append(current_number)
     print (sum(even_list))
     return sum(even_list)
         
